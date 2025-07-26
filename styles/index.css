@@ -26,6 +26,10 @@ body {
 
 }
 
+.hide{
+    display: none;
+}
+
 /* Header section style */
 header {
     max-width: 1280px;
@@ -39,6 +43,7 @@ header {
 
 .hero-section .heading {
     max-width: 200px;
+    margin-left: 30px;
 }
 
 .header-title {
@@ -94,5 +99,94 @@ main {
 }
 .lower-features{
     display: flex;justify-content: space-around;
+
+}
+
+
+
+
+@media screen and (max-width:425px) {
+    .m-container{
+        max-width: 425px;
+        margin: auto;
+        /*  */
+    }
+    .hide-m{
+        display: none;
+    }
+    .hide{
+        display: flex;
+    }
+    .hero-section{
+        max-width: 385px;
+        display:flex;
+        justify-content: center;
+        flex-direction: column-reverse;
+        width: 100%;
+        
+        margin: auto;
+        /* margin-left: 50px; */
+        /* background-color: wheat; */
+    }
+    .hero-section .heading {
+        text-align: center;
+    max-width: 400px;
+    /* margin-left: 30px; */
+}
+.header-title {
+    font-size: 30px;
+    font-weight: bolder;
+    color: darkgreen;
+    margin-bottom: 5px;
+    margin-top: 40px;
+}
+.hero-section img {
+    width:400px;
+    /* height: 380px; */
+    /* border-radius: 20px; */
+    border-radius:0;
+    margin: auto;
+    margin-left: 30px;
+}
+
+
+
+/* key Features section  */
+.features-title{
+    text-align: center;
+    font-size: 30px;
+}
+    .upper-features , .lower-features{
+        display:grid;
+        grid-template-columns:repeat(2 , 1fr);
+
+    }
+
+    .feature-card{
+    width: 140px;
+    height: 140px;
+    margin-bottom:20px;
+    text-align: center;
+    /* border: 1px solid greenyellow; */
+    padding:25px 15px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px 10px rgb(245, 255, 245);
+}
+.upper-features{
+    /* display: flex;
+    justify-content: space-around;
+    align-items: center; */
+    margin: 30px 30px;
+    gap:30px
+    
+}
+.lower-features{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0px 30px;
+    gap:30px
+    
+}
 
 }
