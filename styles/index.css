@@ -1,0 +1,98 @@
+* {
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* share style  */
+.all-section {
+    padding: 20px 0;
+
+}
+
+.btn-primary {
+    padding: 10px 20px;
+    background-color: darkgreen;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    margin: 15px auto;
+
+}
+
+
+body {
+    background-color: rgb(229, 254, 229);
+
+}
+
+/* Header section style */
+header {
+    max-width: 1280px;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.hero-section {
+    background-color: rgb(245, 255, 245);
+}
+
+.hero-section .heading {
+    max-width: 200px;
+}
+
+.header-title {
+    font-size: 50px;
+    font-weight: bolder;
+    color: darkgreen;
+    margin-bottom: 5px;
+}
+
+.hero-section {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+.hero-section img {
+    width: 500px;
+    /* height: 380px; */
+    border-radius: 20px;
+}
+
+/* main section start  */
+main {
+    width: 1280px;
+    margin:0 auto;
+    background-color: white;
+    padding-top: 50PX ;
+}
+.features-title{
+    text-align: center;
+    font-size: 50px;
+}
+
+.upper-features{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px 30px;
+    gap:30px
+    
+}
+.feature-card{
+    width: 250px;
+    height: 180px;
+    margin-bottom:50px;
+    text-align: center;
+    /* border: 1px solid greenyellow; */
+    padding:25px 15px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px 10px rgb(245, 255, 245);
+}
+.lower-features{
+    display: flex;justify-content: space-around;
+
+}
