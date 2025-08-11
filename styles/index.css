@@ -34,7 +34,7 @@ body {
 header {
     max-width: 1280px;
     margin: auto;
-    margin-top: 15px;
+    margin-top: 0;
 }
 
 .hero-section {
@@ -73,6 +73,7 @@ main {
     margin:0 auto;
     background-color: white;
     padding-top: 50PX ;
+    margin-bottom:0px;
 }
 .features-title{
     text-align: center;
@@ -84,7 +85,8 @@ main {
     justify-content: space-around;
     align-items: center;
     margin: 50px 30px;
-    gap:30px
+    gap:30px;
+    margin-bottom: 0px;
     
 }
 .feature-card{
@@ -98,7 +100,35 @@ main {
     box-shadow: 5px 5px 10px 10px rgb(245, 255, 245);
 }
 .lower-features{
-    display: flex;justify-content: space-around;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.features2{
+    background-color:rgb(245, 255, 245); ;
+}
+.feature-card2{
+    background-color: white;
+    /* box-shadow:5px 5px 10px 10px white ; */
+}
+footer{
+    
+    
+    margin-top: 0px;
+}
+.footer{
+        display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 50px;
+    justify-content: center;
+    height: 150px;
+    width: 1280px;
+    margin:0 auto;
+    background-color:darkgreen ;
+    margin-top: 0;
+    color: white;
 
 }
 
