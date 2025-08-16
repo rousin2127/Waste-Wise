@@ -41,8 +41,8 @@ document.getElementById("signupForm")?.addEventListener("submit", async (e) => {
   if (!name) return alert("Name is required.");
   if (!validateEmail(email)) return alert("⚠️ Please enter a valid email address!");
   if (password.length < 6) return alert("⚠️ Password must be at least 8 characters!");
-  if (password !== confirmPassword) return alert("⚠️ Passwords do not match.");
-  if (!role) return alert("⚠️ Please select a role.");
+  if (password !== confirmPassword) return alert("⚠️ Passwords do not match!");
+  if (!role) return alert("⚠️ Please select a role!");
 
   try {
     const res = await fetch(`${API_BASE}/auth/signup`, {
@@ -66,9 +66,9 @@ document.getElementById("signinForm")?.addEventListener("submit", async (e) => {
   const password = document.getElementById("signinPassword").value;
   const role = document.getElementById("signinRole").value;
 
-  if (!validateEmail(email)) return alert("Enter a valid email.");
-  if (password.length < 6) return alert("Password must be at least 6 characters.");
-  if (!role) return alert("Please select a role.");
+  if (!validateEmail(email)) return alert("⚠️ Please enter a valid email address!");
+  if (password.length < 6) return alert("⚠️ Password must be at least 8 characters!");
+  if (!role) return alert("⚠️ Please select a role!");
 
   try {
     const res = await fetch(`${API_BASE}/auth/signin`, {
