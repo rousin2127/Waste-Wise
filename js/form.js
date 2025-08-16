@@ -85,6 +85,16 @@ document.getElementById("signinForm")?.addEventListener("submit", async (e) => {
   }
 });
 
+/* ---------- PASSWORD SHOW/HIDE FUNCTION ---------- */
+function togglePassword(fieldId) {
+    let passField = document.getElementById(fieldId);
+    if (passField.type === "password") {
+        passField.type = "text";
+    } else {
+        passField.type = "password";
+    }
+}
+
 /* ---------- DASHBOARD PROFILE FILL ---------- */
 function fillProfileHeader() {
   const nameEl = document.getElementById("profileName");
