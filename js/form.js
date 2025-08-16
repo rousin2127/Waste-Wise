@@ -95,6 +95,17 @@ function togglePassword(fieldId) {
     }
 }
 
+/* ---------- DARK MODE TOGGLE FUNCTION ---------- */
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    let btn = document.getElementById("darkModeBtn");
+    if (document.body.classList.contains("dark-mode")) {
+        btn.textContent = "☀️ Light Mode";
+    } else {
+        btn.textContent = "🌙 Dark Mode";
+    }
+}
+
 /* ---------- DASHBOARD PROFILE FILL ---------- */
 function fillProfileHeader() {
   const nameEl = document.getElementById("profileName");
