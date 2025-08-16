@@ -39,10 +39,10 @@ document.getElementById("signupForm")?.addEventListener("submit", async (e) => {
   const phone = document.getElementById("signupPhone")?.value?.trim();
 
   if (!name) return alert("Name is required.");
-  if (!validateEmail(email)) return alert("Enter a valid email.");
-  if (password.length < 6) return alert("Password must be at least 6 characters.");
-  if (password !== confirmPassword) return alert("Passwords do not match.");
-  if (!role) return alert("Please select a role.");
+  if (!validateEmail(email)) return alert("⚠️ Please enter a valid email address!");
+  if (password.length < 6) return alert("⚠️ Password must be at least 8 characters!");
+  if (password !== confirmPassword) return alert("⚠️ Passwords do not match.");
+  if (!role) return alert("⚠️ Please select a role.");
 
   try {
     const res = await fetch(`${API_BASE}/auth/signup`, {
