@@ -1,0 +1,48 @@
+.form-container {
+  max-width: 400px;
+  margin: 80px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-container h1 {
+  text-align: center;
+  color: darkgreen;
+  margin-bottom: 20px;
+}
+
+.form-container label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.form-container input, .form-container select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.form-container p {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.form-container a {
+  color: darkgreen;
+  text-decoration: none;
+}
+
+.form-container a:hover {
+  text-decoration: underline;
+}
+
+#profileRole {
+  background: #f6fff6;
+  border: 1px solid #ccc;
+  cursor: not-allowed;
+}

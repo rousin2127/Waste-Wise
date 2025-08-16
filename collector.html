@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collector Dashboard - WasteWise</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+</head>
+
+<body>
+    <header class="dashboard-header">
+        <h1>Collector Dashboard</h1>
+        <div>
+            <button onclick="window.location.href='profile.html'">Profile</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </header>
+    <section class="profile-card">
+        <h2 id="profileName"></h2>
+        <p id="profileEmail"></p>
+        <span id="profileRole"></span>
+    </section>
+
+
+    <section class="dashboard-container">
+        <div class="dashboard-card" onclick="alert('View Routes Page Coming Soon')">
+            <img src="image/map.png" alt="Routes">
+            <h3>View Routes</h3>
+            <p>Check and manage collection routes.</p>
+        </div>
+        <div class="dashboard-card" onclick="alert('Update Collection Page Coming Soon')">
+            <img src="image/collector.png" alt="Collection">
+            <h3>Update Collections</h3>
+            <p>Mark completed pickups and updates.</p>
+        </div>
+        <div class="dashboard-card" onclick="alert('Performance Reports Page Coming Soon')">
+            <img src="image/admin.png" alt="Reports">
+            <h3>Performance Reports</h3>
+            <p>Analyze your work efficiency.</p>
+        </div>
+    </section>
+
+    <script>
+        function logout() {
+            localStorage.removeItem("userRole");
+            window.location.href = "signin.html";
+        }
+    </script>
+    <script>
+        document.getElementById("profileName").innerText = localStorage.getItem("userName") || "Unknown User";
+        document.getElementById("profileEmail").innerText = localStorage.getItem("userEmail") || "No Email";
+        document.getElementById("profileRole").innerText = localStorage.getItem("userRole") || "No Role";
+
+        function logout() {
+            localStorage.clear();
+            window.location.href = "signin.html";
+        }
+    </script>
+    <script src="js/form.js"></script>
+
+
+</body>
+
+</html>

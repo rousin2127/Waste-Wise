@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - WasteWise</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>User Profile</h1>
+        <form id="profileForm">
+            <label>Name</label>
+            <input type="text" id="profileName" required>
+
+            <label>Email</label>
+            <input type="email" id="profileEmail" required>
+
+            <label>Phone</label>
+            <input type="tel" id="profilePhone" placeholder="01XXXXXXXXX">
+
+
+            <label>Role</label>
+            <input type="text" id="profileRole" readonly>
+
+            <button type="submit" class="btn-primary">Save Changes</button>
+        </form>
+        <p><a href="resident.html" id="backLink">⬅ Back to Dashboard</a></p>
+    </div>
+
+    <script>
+        // Load profile info from localStorage
+        document.getElementById("profileName").value = localStorage.getItem("userName") || "";
+        document.getElementById("profileEmail").value = localStorage.getItem("userEmail") || "";
+        document.getElementById("profileRole").value = localStorage.getItem("userRole") || "";
+
+        // Set back link based on role
+        if (localStorage.getItem("userRole") === "collector") {
+            document.getElementById("backLink").setAttribute("href", "collector.html");
+        }
+
+        // Save changes
+        document.getElementById("profileForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            localStorage.setItem("userName", document.getElementById("profileName").value);
+            localStorage.setItem("userEmail", document.getElementById("profileEmail").value);
+            alert("Profile updated successfully!");
+        });
+    </script>
+    <script src="js/form.js"></script>
+    <script>
+        // Pre-fill from localStorage for faster UX; backend source of truth on save
+        window.addEventListener('DOMContentLoaded', () => {
+            document.getElementById("profileName").value = localStorage.getItem("userName") || "";
+            document.getElementById("profileEmail").value = localStorage.getItem("userEmail") || "";
+            document.getElementById("profileRole").value = localStorage.getItem("userRole") || "";
+            const p = localStorage.getItem("userPhone");
+            if (p) document.getElementById("profilePhone").value = p;
+        });
+    </script>
+
+</body>
+
+</html>

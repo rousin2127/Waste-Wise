@@ -1,0 +1,78 @@
+.dashboard-header {
+  background-color: darkgreen;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+}
+
+.dashboard-header button {
+  background: white;
+  color: darkgreen;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dashboard-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 30px;
+}
+
+.dashboard-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.dashboard-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.dashboard-card img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.profile-card {
+  background: #f6fff6;
+  border: 1px solid #d0f0d0;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 20px;
+  text-align: center;
+}
+
+.profile-card h2 {
+  margin-bottom: 5px;
+  color: darkgreen;
+}
+
+.profile-card p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.profile-card span {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 3px 8px;
+  background: darkgreen;
+  color: white;
+  border-radius: 5px;
+  font-size: 12px;
+}

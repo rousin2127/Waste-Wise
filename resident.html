@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resident Dashboard - WasteWise</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+</head>
+
+<body>
+    <header class="dashboard-header">
+        <h1>Resident Dashboard</h1> <!-- or Resident Dashboard -->
+        <div>
+            <button onclick="window.location.href='profile.html'">Profile</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </header>
+    <section class="profile-card">
+        <h2 id="profileName"></h2>
+        <p id="profileEmail"></p>
+        <span id="profileRole"></span>
+    </section>
+
+
+    <section class="dashboard-container">
+        <div class="dashboard-card" onclick="alert('Track Pickups Page Coming Soon')">
+            <img src="image/home.png" alt="Pickups">
+            <h3>Track Pickups</h3>
+            <p>See upcoming and past waste pickups.</p>
+        </div>
+        <div class="dashboard-card" onclick="window.location.href='payment.html'">
+            <img src="image/payment.png" alt="Payment">
+            <h3>Make Payment</h3>
+            <p>Pay your waste management bills online.</p>
+        </div>
+
+        <div class="dashboard-card" onclick="alert('Report Issue Page Coming Soon')">
+            <img src="image/complain.png" alt="Complaint">
+            <h3>Report Issue</h3>
+            <p>Log an issue with photo/video evidence.</p>
+        </div>
+    </section>
+
+    <script>
+        function logout() {
+            localStorage.removeItem("userRole");
+            window.location.href = "signin.html";
+        }
+    </script>
+    <script>
+        document.getElementById("profileName").innerText = localStorage.getItem("userName") || "Unknown User";
+        document.getElementById("profileEmail").innerText = localStorage.getItem("userEmail") || "No Email";
+        document.getElementById("profileRole").innerText = localStorage.getItem("userRole") || "No Role";
+
+        function logout() {
+            localStorage.clear();
+            window.location.href = "signin.html";
+        }
+    </script>
+    <script src="js/form.js"></script>
+
+
+</body>
+
+</html>
